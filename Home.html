@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Home.css">
+</head>
+
+<body class="mx-auto w-75  p-5 mt-5 d-flex flex-column justify-content-center align-items-center">
+    <nav class="text-center text-light"><h1 class="fw-bolder">Smart Login</h1></nav>
+    <div class="main m-auto w-75  p-5 mt-5"><h2 class="text-light" id="name"></h2></div>
+   <div class=" mx-auto m-5"> <button class="btn btn-outline-danger text-light "><a class="text-light text-decoration-none" href="SignIn.html">LogOut</a></button></div>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (currentUser) {
+          document.getElementById('name').innerHTML = `Hello ${currentUser.Name}`;
+        }
+      </script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
